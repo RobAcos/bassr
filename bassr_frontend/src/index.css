@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Myriad Pro;
+}
+
+body {
+  background-color: #ddd;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.c-player {
+  display: block;
+  background-color: aqua;
+  padding: 50px;
+  border-radius: 16px;
+}
+
+.c-player > h4 {
+  color: black;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+
+.c-player > p {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.c-player-info .info-img {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.c-player-info .info-img img {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10%;
+}
+
+.c-player-info .info-title {
+  color: black;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.c-player-info .info-artist {
+  color: black;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.c-player--controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.c-player--controls .play-btn{
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 0px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.c-player--controls .skip-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
+}
