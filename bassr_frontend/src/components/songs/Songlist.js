@@ -20,7 +20,11 @@ const Songlist = (props) => {
         <th>length</th>
 
         {songData.map((song) => (
-          <tr onClick={() => {}}>
+          <tr
+            onClick={(e) => {
+              props.setSongs([song]);
+            }}
+          >
             {console.log(song)}
             <td>{song.name}</td>
             <td>{song.album.name}</td>

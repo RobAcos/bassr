@@ -3,7 +3,7 @@ import Player from "./components/Player";
 import Songlist from "./components/songs/Songlist";
 
 function App() {
-  const [songs] = useState([
+  const [songs, setSongs] = useState([
     {
       title: "Sunday",
       artist: "Bloc Party",
@@ -75,7 +75,7 @@ function App() {
         nextSongIndex={nextSongIndex}
         songs={songs}
       />
-      <Songlist />
+      <Songlist setSongs={setSongs} />
     </div>
   );
 }
