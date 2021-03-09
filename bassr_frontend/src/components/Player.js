@@ -43,7 +43,7 @@ function Player(props) {
   return (
     <div className="c-player">
       <audio
-        src={props.songs[props.currentSongIndex].src}
+        src={props.songs[props.currentSongIndex].song_url}
         ref={audioEl}
       ></audio>
       <h4>Playing now</h4>
@@ -56,8 +56,10 @@ function Player(props) {
       <p>
         Next up:{" "}
         <span>
-          {props.songs[props.nextSongIndex].title} by{" "}
-          {props.songs[props.nextSongIndex].artist}
+          {console.log(props.songs.length - 1)}
+          {console.log(props.nextSongIndex)}
+          {props.songs[props.nextSongIndex].name} by{" "}
+          {props.songs[props.nextSongIndex].artist.name}
         </span>
       </p>
     </div>

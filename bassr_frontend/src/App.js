@@ -5,24 +5,24 @@ import Songlist from "./components/songs/Songlist";
 function App() {
   const [songs, setSongs] = useState([
     {
-      title: "Sunday",
-      artist: "Bloc Party",
+      name: "Sunday",
+      artist: { name: "Bloc Party" },
       img_src: "https://arcosmedia.cc/wp-content/uploads/2020/12/bloc.jpg",
-      src:
+      song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/sunday-bloc-party.mp3",
     },
     {
-      title: "Diamonds",
-      artist: "Boxer Rebellion",
+      name: "Diamonds",
+      artist: { name: "Boxer Rebellion" },
       img_src: "https://arcosmedia.cc/wp-content/uploads/2020/12/boxer.jpg",
-      src:
+      song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/diamonds-boxer-rebellion.mp3",
     },
     {
-      title: "Unconditional",
-      artist: "The Bravery",
+      name: "Unconditional",
+      artist: { name: "The Bravery" },
       img_src: "https://arcosmedia.cc/wp-content/uploads/2020/12/brave.jpg",
-      src:
+      song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/unconditional-the-bravery.mp3",
     },
   ]);
