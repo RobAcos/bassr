@@ -56,10 +56,14 @@ function Player(props) {
       <p>
         Next up:{" "}
         <span>
-          {console.log(props.songs.length - 1)}
-          {console.log(props.nextSongIndex)}
-          {props.songs[props.nextSongIndex].name} by{" "}
-          {props.songs[props.nextSongIndex].artist.name}
+          {props.songs.length > 2 ? (
+            <div>
+              {props.songs[props.nextSongIndex].name} by{" "}
+              {props.songs[props.nextSongIndex].artist.name}
+            </div>
+          ) : (
+            ""
+          )}
         </span>
       </p>
     </div>
