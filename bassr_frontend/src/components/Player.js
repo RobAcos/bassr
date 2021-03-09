@@ -16,30 +16,26 @@ function Player(props) {
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
-      props.setCurrentSong(() => {
-        let temp = props.songs.findIndex(
-          (song) => song.id === props.currentSong.id
-        );
+      props.setCurrentSongIndex(() => {
+        let temp = props.currentSongIndex;
         temp++;
 
         if (temp > props.songs.length - 1) {
           temp = 0;
         }
 
-        return props.songs[temp];
+        return temp;
       });
     } else {
-      props.setCurrentSong(() => {
-        let temp = props.songs.findIndex(
-          (song) => song.id === props.currentSong.id
-        );
+      props.setCurrentSongIndex(() => {
+        let temp = props.currentSongIndex;
         temp--;
 
         if (temp < 0) {
           temp = props.songs.length - 1;
         }
 
-        return props.songs[temp];
+        return temp;
       });
     }
   };
@@ -47,11 +43,11 @@ function Player(props) {
   return (
     <div className="c-player">
       <audio
-        src={((song) => song.id === props.currentSong.id).song_url}
+        src={props.songs[props.currentSongIndex].src}
         ref={audioEl}
       ></audio>
       <h4>Playing now</h4>
-      <PlayerInfo song={(song) => song.id === props.currentSong.id} />
+      <PlayerInfo song={props.songs[props.currentSongIndex]} />
       <PlayerControls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
