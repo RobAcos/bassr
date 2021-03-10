@@ -37,13 +37,15 @@ Song.destroy_all
 User.create(
         name: "Bob",
         username: "bobby",
-        password: "1234",
-        user_pic_url: "empty")
+        password: "Abc123",
+        user_pic_url: "empty",
+        password_confirmation: "Abc123")
 User.create(
         name: "ross",
         username: "ross123",
-        password: "1234",
-        user_pic_url: "empty")
+        password: "Abc123",
+        user_pic_url: "empty",
+        password_confirmation: "Abc123")
 
 artist1 = Artist.create(
         name: "band1",

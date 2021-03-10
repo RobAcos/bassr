@@ -1,66 +1,72 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-const SONGS_URL = "http://localhost:3000/songs";
-
-class Login extends Component {
-  state = {
-    username: "",
-    password: "",
-  };
-
-  login = (event) => {
-    event.preventDefault();
-    event.target.reset();
-
-    const { username, password } = this.state;
-    const user = { username, password };
-
+const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
+  const handleSubmit = (e) => {
     fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ user }),
+      body: JSON.stringify({
+        user: {
+          username: username,
+          password: password,
+        },
+      }),
     })
-      .then((r) => r.json())
-      .then((response) => {
-        console.log(response);
-        localStorage.token = response.jwt;
-        this.props.setCurrentUser(response.user);
+      .then((resp) => resp.json())
+      .then((data) => {
+        localStorage.token = data.token;
+        history.push("/player");
       });
   };
-
-  render() {
-    return (
-      <div className="login-form-div">
-        <form className="login-form" onSubmit={this.login}>
-          <div className="inline fields">
-            <input
-              onChange={(e) => this.setState({ username: e.target.value })}
-              type="text"
-              name="username"
-              placeholder="Username"
-            />
-            <input
-              onChange={(e) => this.setState({ password: e.target.value })}
-              type="password"
-              name="password"
-              placeholder="Password"
-            />
-          </div>
-          <button className="ui button" type="submit">
-            LOGIN
-          </button>
-        </form>
-        <form className="logout-form" onSubmit={this.props.handleLogout}>
-          <button className="ui button" type="submit">
-            LOGOUT
-          </button>
-        </form>
+  return (
+    <div>
+      <div className="field">
+        <p className="control has-icons-left has-icons-right">
+          <input
+            className="input"
+            value={username}
+            type="username"
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <span className="icon is-small is-left">
+            <i className="fas fa-envelope"></i>
+          </span>
+          <span className="icon is-small is-right">
+            <i className="fas fa-check"></i>
+          </span>
+        </p>
       </div>
-    );
-  }
-}
+      <div className="field">
+        <p className="control has-icons-left">
+          <input
+            className="input"
+            type="password"
+            value={password}
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span className="icon is-small is-left">
+            <i className="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div className="field">
+        <p className="control">
+          <button onClick={handleSubmit} className="button is-success">
+            Login
+          </button>
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Login;
