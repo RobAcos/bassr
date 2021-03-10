@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  # before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
   def index
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1
-  def destroy
+  def delete
     @user = User.find(params[:id])
     @user.destroy
     render json: @user
