@@ -4,7 +4,7 @@ function PlayerInfo(props) {
   return (
     <div className="c-player-info">
       <div className="info-img">
-        <img src={props.song.img_src} alt="" />
+        <img src={props.song.album.album_art_url} alt="" />
       </div>
       <h3 className="info-name">{props.song.name}</h3>
       <h4 className="info-artist">{props.song.artist.name}</h4>

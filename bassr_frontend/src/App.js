@@ -1,13 +1,20 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+  // Link,
+  Redirect,
+} from "react-router-dom";
 import Login from "./components/Login";
 import MainContainer from "./components/MainContainer";
+import Home from "./components/Home";
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -19,15 +26,20 @@ function App() {
               <Link to="/users">Users</Link>
             </li>
           </ul>
-        </nav>
-
+        </nav> */}
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/">
+            <div className="home-set">
+              <Home />
+            </div>
+          </Route>
+          <Route exact path="/login">
             <Login />
           </Route>
           <Route path="/player">
+            {localStorage.token ? <span></span> : <Redirect to="/login" />}
             <MainContainer />
           </Route>
         </Switch>

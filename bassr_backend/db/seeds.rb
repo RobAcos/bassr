@@ -47,74 +47,71 @@ User.create(
         user_pic_url: "empty",
         password_confirmation: "Abc123")
 
-artist1 = Artist.create(
-        name: "band1",
-        genre: "genre1",
+boxer = Artist.create(
+        name: "Boxer Rebellion",
+        genre: "Rock",
         profile_pic_url: "empty",
         banner_pic_url: "empty",
         favorites: 0)
-artist2 = Artist.create(
-        name: "band2",
-        genre: "genre1",
+caifanes = Artist.create(
+        name: "Caifanes",
+        genre: "Rock",
         profile_pic_url: "empty",
         banner_pic_url: "empty",
         favorites: 0)
-artist3 = Artist.create(
-        name: "band3",
-        genre: "genre1",
+robthomas = Artist.create(
+        name: "Rob Thomas",
+        genre: "Smooth",
         profile_pic_url: "empty",
         banner_pic_url: "empty",
         favorites: 0)
 
-album1 = Album.create(
-        name: "album1",
-        genre: "genre1",
-        year: 1999,
-        album_art_url: "empty",
-        artist_id: artist1.id,
+promises = Album.create(
+        name: "Promises",
+        genre: "Rock",
+        year: 2013,
+        album_art_url: "https://m.media-amazon.com/images/I/81zbx5XCMzL._SS500_.jpg",
+        artist_id: boxer.id,
         favorites: 0)
-album2 = Album.create(
-        name: "album2",
-        genre: "genre1",
-        year: 2001,
-        album_art_url: "empty",
-        artist_id: artist1.id,
+diablito = Album.create(
+        name: "El Diablito",
+        genre: "rock",
+        year: 1990,
+        album_art_url: "https://lastfm.freetls.fastly.net/i/u/ar0/426f2893eccac07c938c547141384ffb.jpg",
+        artist_id: caifanes.id,
         favorites: 0)
-album3 = Album.create(
-        name: "album3",
-        genre: "genre1",
-        year: 2005,
-        album_art_url: "empty",
-        artist_id: artist2.id,
+littlewonders = Album.create(
+        name: "Little Wonders",
+        genre: "Smooth",
+        year: 2007,
+        album_art_url: "https://pbs.twimg.com/profile_images/1095186612437188609/zQCnsPPe.jpg",
+        artist_id: robthomas.id,
         favorites: 0)
-album4 = Album.create(
-        name: "album4",
-        genre: "genre1",
-        year: 1999,
-        album_art_url: "empty",
-        artist_id: artist3.id,
-        favorites: 0)
+
 song1 = Song.create(
-        name: "monday",
-        length: "1:41",
-        tracklist: 1,
-        song_url: "empty",
-        genre: "genre1",
-        album_id: album1.id,
+        name: "Keep Moving",
+        length: "4:03",
+        tracklist: 6,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/keep-moving-boxer-rebellion.mp3",
+        album_url: "https://m.media-amazon.com/images/I/81zbx5XCMzL._SS500_.jpg",
+        genre: "rock",
+        album_id: promises.id,
         favorites: 0)
 song2 = Song.create(
-        name: "tuesday",
-        length: "2:00",
-        tracklist: 2,
-        song_url: "empty",
-        genre: "genre1",
-        album_id: album1.id,
+        name: "La Celula Que Explota",
+        length: "3:36",
+        tracklist: 7,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/la-celula-que-explota-caifanes.mp3",
+        album_url: "https://lastfm.freetls.fastly.net/i/u/ar0/426f2893eccac07c938c547141384ffb.jpg",
+        genre: "Rock",
+        album_id: diablito.id,
         favorites: 0)
 song3 = Song.create(
-        name: "wednesday",
-        length: "5:00",
-        tracklist: 3,
-        song_url: "empty",
-        genre: "genre1",
-        album_id: album2.id,
+        name: "Little Wonders",
+        length: "3:45",
+        tracklist: 1,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/Little-Wonders-Rob-Thomas.mp3",
+        genre: "Smooth",
+        album_url: "https://pbs.twimg.com/profile_images/1095186612437188609/zQCnsPPe.jpg",
+        album_id: littlewonders.id,
         favorites: 0)

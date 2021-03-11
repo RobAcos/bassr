@@ -14,23 +14,29 @@ const Songlist = (props) => {
   if (songData != null) {
     return (
       <table>
-        <th>Name</th>
-        <th>Album</th>
-        <th>Artist</th>
-        <th>length</th>
-
-        {songData.map((song) => (
-          <tr
-            onClick={(e) => {
-              props.setSongs([song]);
-            }}
-          >
-            {console.log(song)}
-            <td>{song.name}</td>
-            <td>{song.album.name}</td>
-            <td>{song.artist.name}</td>
-            <td>{song.length}</td>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Album</th>
+            <th>Artist</th>
+            <th>length</th>
           </tr>
+        </thead>
+        {songData.map((song) => (
+          <tbody>
+            <tr
+              onClick={(e) => {
+                props.setSongs([song]);
+              }}
+            >
+              {/* {console.log(song)} */}
+
+              <td>{song.name}</td>
+              <td>{song.album.name}</td>
+              <td>{song.artist.name}</td>
+              <td>{song.length}</td>
+            </tr>
+          </tbody>
         ))}
       </table>
     );

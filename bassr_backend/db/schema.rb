@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2021_02_26_220517) do
     t.string "name"
     t.string "genre"
     t.integer "year"
-    t.integer "album_art_url"
+    t.string "album_art_url"
     t.integer "favorites"
     t.integer "artist_id"
     t.datetime "created_at", precision: 6, null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_02_26_220517) do
     t.string "length"
     t.integer "tracklist"
     t.string "song_url"
+    t.string "album_url"
     t.string "genre"
     t.integer "favorites"
     t.integer "album_id"

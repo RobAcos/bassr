@@ -1,27 +1,31 @@
 import { useState, useEffect } from "react";
 import Player from "./Player";
 import Songlist from "./songs/Songlist";
+import Usercard from "./Usercard";
 
 function MainContainer() {
   const [songs, setSongs] = useState([
     {
       name: "Sunday",
       artist: { name: "Bloc Party" },
-      img_src: "https://arcosmedia.cc/wp-content/uploads/2020/12/bloc.jpg",
+      album_art_url:
+        "https://arcosmedia.cc/wp-content/uploads/2020/12/bloc.jpg",
       song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/sunday-bloc-party.mp3",
     },
     {
       name: "Diamonds",
       artist: { name: "Boxer Rebellion" },
-      img_src: "https://arcosmedia.cc/wp-content/uploads/2020/12/boxer.jpg",
+      album_art_url:
+        "https://arcosmedia.cc/wp-content/uploads/2020/12/boxer.jpg",
       song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/diamonds-boxer-rebellion.mp3",
     },
     {
       name: "Unconditional",
       artist: { name: "The Bravery" },
-      img_src: "https://arcosmedia.cc/wp-content/uploads/2020/12/brave.jpg",
+      album_art_url:
+        "https://arcosmedia.cc/wp-content/uploads/2020/12/brave.jpg",
       song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/unconditional-the-bravery.mp3",
     },
@@ -41,14 +45,22 @@ function MainContainer() {
   }, [currentSongIndex, songs.length]);
 
   return (
-    <div className="App">
-      <Player
-        currentSongIndex={currentSongIndex}
-        setCurrentSongIndex={setCurrentSongIndex}
-        nextSongIndex={nextSongIndex}
-        songs={songs}
-      />
-      <Songlist setSongs={setSongs} />
+    <div>
+      <div className="user-left">
+        <Usercard />
+      </div>
+
+      <div className="song-center">
+        <Songlist setSongs={setSongs} />
+      </div>
+      <div className="App">
+        <Player
+          currentSongIndex={currentSongIndex}
+          setCurrentSongIndex={setCurrentSongIndex}
+          nextSongIndex={nextSongIndex}
+          songs={songs}
+        />
+      </div>
     </div>
   );
 }

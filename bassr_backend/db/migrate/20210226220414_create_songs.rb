@@ -5,6 +5,7 @@ class CreateSongs < ActiveRecord::Migration[6.0]
       t.string :length
       t.integer :tracklist
       t.string :song_url
+      t.string :album_url
       t.string :genre
       t.integer :favorites
       t.integer :album_id

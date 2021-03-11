@@ -5,12 +5,171 @@
   font-family: Myriad Pro;
 }
 
-body {
-  background-color: #ddd;
+.home-set {
+  background-color: black;
 }
-/* 
+
+.home-banner {
+  background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F750037840%2F960x0.jpg%3Ffit%3Dscale");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  width: 500px;
+  margin-left: 50%;
+  margin-top: 100px;
+}
+
+.banner-text {
+  margin-left: 65%;
+}
+
+.gradient-button {
+  margin: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+}
+.gradient-button a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.gradient-button a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 8px 10px 12px;
+}
+.gradient-button-1 {
+  background-image: linear-gradient(
+    to right,
+    #f0689c 0%,
+    #9b3a56 51%,
+    #692536 100%
+  );
+}
+.gradient-button-1:hover {
+  background-position: right center;
+}
+
+/* player table */
+table {
+  border-collapse: collapse;
+  margin-bottom: 3em;
+  width: 33%;
+  background: rgba(255, 255, 255, 0.2);
+}
+td,
+th {
+  padding: 0.75em 1.5em;
+  text-align: left;
+}
+td.err {
+  background-color: #e992b9;
+  color: #fff;
+  font-size: 0.75em;
+  text-align: center;
+  line-height: 1;
+}
+th {
+  background-color: #ff0095;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+}
+tbody th {
+  background-color: #5500ff;
+}
+tbody tr:nth-child(2n-1) {
+  background-color: #f5f5f5;
+  transition: all 0.125s ease-in-out;
+}
+tbody tr:hover {
+  background-color: rgba(13, 60, 41, 0.3);
+}
+
+/* For appearance */
+.sticky-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  margin: 3em 0;
+  width: 100%;
+}
+.sticky-wrap .sticky-thead,
+.sticky-wrap .sticky-col,
+.sticky-wrap .sticky-intersect {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.125s ease-in-out;
+  z-index: 50;
+  width: auto; /* Prevent table from stretching to full size */
+}
+.sticky-wrap .sticky-thead {
+  box-shadow: 0 0.25em 0.1em -0.1em rgba(0, 0, 0, 0.125);
+  z-index: 100;
+  width: 100%; /* Force stretch */
+}
+.sticky-wrap .sticky-intersect {
+  opacity: 1;
+  z-index: 150;
+}
+.sticky-wrap .sticky-intersect th {
+  background-color: #666;
+  color: #eee;
+}
+.sticky-wrap td,
+.sticky-wrap th {
+  box-sizing: border-box;
+}
+
+/* Not needed for sticky header/column functionality */
+td.user-name {
+  text-transform: capitalize;
+}
+.sticky-wrap.overflow-y {
+  overflow-y: auto;
+  max-height: 50vh;
+}
+/* table end */
+/* usercard */
+.user-card {
+  background-image: url("http://arcos-platform.site/wp-content/uploads/2021/03/PosterArtboard-16Asse.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  float: left;
+  height: 100vh;
+}
+/* songlist */
+.song-center {
+  background-image: url("http://arcos-platform.site/wp-content/uploads/2021/03/PosterArtboard-16-copyAsse.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 450px;
+  float: left;
+  height: 100vh;
+}
+
 .App {
-  display: flex;
+  float: left;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -65,14 +224,14 @@ body {
   margin-bottom: 10px;
 }
 
-.c-player--controls{
+.c-player--controls {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.c-player--controls .play-btn{
+.c-player--controls .play-btn {
   display: flex;
   margin: 0 30px;
   padding: 20px;
@@ -91,4 +250,4 @@ body {
   cursor: pointer;
   color: black;
   font-size: 18px;
-} */
+}
