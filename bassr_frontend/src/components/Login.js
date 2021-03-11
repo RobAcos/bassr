@@ -27,43 +27,49 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="field">
-        <p className="control has-icons-left has-icons-right">
-          <input
-            className="input"
-            value={username}
-            type="username"
-            placeholder="Username"
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <span className="icon is-small is-left">
-            <i className="fas fa-envelope"></i>
-          </span>
-          <span className="icon is-small is-right">
-            <i className="fas fa-check"></i>
-          </span>
-        </p>
-      </div>
-      <div className="field">
-        <p className="control has-icons-left">
-          <input
-            className="input"
-            type="password"
-            value={password}
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <span className="icon is-small is-left">
-            <i className="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-      <div className="field">
-        <p className="control">
-          <button onClick={handleSubmit} className="button is-success">
-            Login
-          </button>
-        </p>
+      <div className="login-img"></div>
+      <div className="container">
+        <div className="top"></div>
+        <div className="bottom"></div>
+        <div className="center">
+          <div className="login-block">
+            <div className="field">
+              <p className="user-field">
+                <input
+                  className="input"
+                  value={username}
+                  type="username"
+                  placeholder="Username"
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </p>
+            </div>
+            <div className="field">
+              <p className="pass-field">
+                <input
+                  className="input"
+                  type="password"
+                  value={password}
+                  placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <div className="field">
+              <p className="">
+                <button
+                  onClick={handleSubmit}
+                  className="gradient-button gradient-button-1"
+                >
+                  Login
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
