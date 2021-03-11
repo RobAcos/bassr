@@ -8,24 +8,21 @@ function MainContainer() {
     {
       name: "Sunday",
       artist: { name: "Bloc Party" },
-      album_art_url:
-        "https://arcosmedia.cc/wp-content/uploads/2020/12/bloc.jpg",
+      album_url: "https://arcosmedia.cc/wp-content/uploads/2020/12/bloc.jpg",
       song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/sunday-bloc-party.mp3",
     },
     {
       name: "Diamonds",
       artist: { name: "Boxer Rebellion" },
-      album_art_url:
-        "https://arcosmedia.cc/wp-content/uploads/2020/12/boxer.jpg",
+      album_url: "https://arcosmedia.cc/wp-content/uploads/2020/12/boxer.jpg",
       song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/diamonds-boxer-rebellion.mp3",
     },
     {
       name: "Unconditional",
       artist: { name: "The Bravery" },
-      album_art_url:
-        "https://arcosmedia.cc/wp-content/uploads/2020/12/brave.jpg",
+      album_url: "https://arcosmedia.cc/wp-content/uploads/2020/12/brave.jpg",
       song_url:
         "https://arcosmedia.cc/wp-content/uploads/2020/12/unconditional-the-bravery.mp3",
     },

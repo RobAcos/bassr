@@ -16,7 +16,7 @@ const Songlist = (props) => {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Title</th>
             <th>Album</th>
             <th>Artist</th>
             <th>length</th>
