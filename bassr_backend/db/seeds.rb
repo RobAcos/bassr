@@ -115,3 +115,98 @@ song3 = Song.create(
         album_url: "https://pbs.twimg.com/profile_images/1095186612437188609/zQCnsPPe.jpg",
         album_id: littlewonders.id,
         favorites: 0)
+
+
+
+placebo = Artist.create(
+        name: "Placebo",
+        genre: "",
+        profile_pic_url: "empty",
+        banner_pic_url: "empty",
+        favorites: 0)
+loudlikelove = Album.create(
+        name: "Loud Like Love",
+        genre: "",
+        year: 0,
+        album_art_url: "",
+        artist_id: placebo.id,
+        favorites: 0)
+loud_like = Song.create(
+        name: "Loud Like Love",
+        length: "4:51",
+        tracklist: 0,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/loud-like-love-placebo.mp3",
+        genre: "",
+        album_url: "https://upload.wikimedia.org/wikipedia/en/1/13/Loud_Like_Love.png",
+        album_id: loudlikelove.id,
+        favorites: 0)
+
+yeahyeahyeahs = Artist.create(
+        name: "Yeah Yeah Yeahs",
+        genre: "",
+        profile_pic_url: "empty",
+        banner_pic_url: "empty",
+        favorites: 0)
+fevertotell = Album.create(
+        name: "Fever to Tell",
+        genre: "",
+        year: 0,
+        album_art_url: "",
+        artist_id: yeahyeahyeahs.id,
+        favorites: 0)
+maps = Song.create(
+        name: "Maps",
+        length: "3:40",
+        tracklist: 0,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/maps-yeah-yeah-yeahs.mp3",
+        genre: "",
+        album_url: "https://i.scdn.co/image/ab67616d00001e021b1cb4ef0f096f9d66fc3dc6",
+        album_id: fevertotell.id,
+        favorites: 0)
+
+interpol = Artist.create(
+        name: "Interpol",
+        genre: "",
+        profile_pic_url: "empty",
+        banner_pic_url: "empty",
+        favorites: 0)
+tobl = Album.create(
+        name: "Turn on the Bright Lights",
+        genre: "",
+        year: 0,
+        album_art_url: "",
+        artist_id: interpol.id,
+        favorites: 0)
+obstacle1 = Song.create(
+        name: "Obstacle-1",
+        length: "4:23",
+        tracklist: 0,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/obstacle-1-interpol.mp3",
+        genre: "",
+        album_url: "https://upload.wikimedia.org/wikipedia/en/6/68/Interpol_-_Turn_On_The_Bright_Lights.jpg",
+        album_id: tobl.id,
+        favorites: 0)
+zoe = Artist.create(
+        name: "Zoe",
+        genre: "",
+        profile_pic_url: "empty",
+        banner_pic_url: "empty",
+        favorites: 0)
+reptilectric = Album.create(
+        name: "Reptilectric",
+        genre: "",
+        year: 0,
+        album_art_url: "",
+        artist_id: zoe.id,
+        favorites: 0)
+sombras = Song.create(
+        name: "Sombras",
+        length: "5:34",
+        tracklist: 0,
+        song_url: "http://arcos-platform.site/wp-content/uploads/2021/03/sombras-zoe.mp3",
+        genre: "",
+        album_url: "https://img.discogs.com/LcyyJTqHgO5zZXrO9zUU_Y5v7fA=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4142097-1356715960-1140.jpeg.jpg",
+        album_id: reptilectric.id,
+        favorites: 0)
+        
+
